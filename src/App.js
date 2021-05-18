@@ -1,11 +1,14 @@
 import React from 'react'
-
+  
+import { useEffect, useState }  from 'react'
 /* スタイルシート */
 import './styles/main.css';
 
 /* コンポーネント */
 import Todo from './components/Todo';
 import Login from "./components/Login";
+
+import Upload from "./components/Upload";
 
 import { auth, storeUserInfo, updateUser } from "./lib/firebase";
 
@@ -28,8 +31,8 @@ function App() {
   const logout = () => {
     auth.signOut();
   };
-
-  const handleImageChanged = async downlodUrl => {
+  
+   const handleImageChanged = async downlodUrl => {
     await updateUser(user, downlodUrl);
   }
 
