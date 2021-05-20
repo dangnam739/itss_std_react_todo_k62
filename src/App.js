@@ -32,7 +32,7 @@ function App() {
     auth.signOut();
   };
   
-   const handleImageChanged = async downlodUrl => {
+  const handleImageChanged = async downlodUrl => {
     await updateUser(user, downlodUrl);
   }
 
